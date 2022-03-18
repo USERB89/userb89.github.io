@@ -1,5 +1,5 @@
 .navbar {
-    overflow: hidden; /* Hide overflow */
+    overflow: hidden ;/* Hide overflow */
     background-color: #333;
 }
 
@@ -76,7 +76,7 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: minmax(33%, 66%);
+    grid-template-columns: 33%;
     grid-gap: 1em;
     grid-template-rows: minmax(100px, auto);
     justify-content: center;
@@ -109,4 +109,9 @@ p{
 
 h1, h2 {
     text-align: center;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
 }
