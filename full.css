@@ -76,10 +76,10 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: minmax(33%, 66%);
     grid-gap: 1em;
     grid-template-rows: minmax(100px, auto);
-
+    justify-content: center;
 }
 .grid > div{
     display: grid;
@@ -93,7 +93,8 @@
 }
 p{
     font-family: "Times New Roman", serif;
-    text-indent: 25px
+    text-indent: 25px;
+    font-size: 14px;
 }
 
 .box1 {
