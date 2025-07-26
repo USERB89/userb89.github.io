@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Строительная компания "БетонПлюс"</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+    header .container {
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      padding: 80px 0;
+    }
+    .bg-dark-blue {
+      background-color: #002244;
+      color: white;
+    }
+    .bg-light-gray {
+      background-color: #f4f4f4;
+    }
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .counter {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #002244;
+    }
+    footer {
+      background-color: #002244;
+      color: white;
+      padding: 20px 0;
+    }
+    .rounded-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Стеклянные карточки для преимуществ */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: white;
+      transition: transform 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">БетонПлюс</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="#advantages">Преимущества</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Статистика</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Хиро-блок с видео -->
+  <header class="d-flex align-items-center text-center">
+    <video autoplay muted loop playsinline id="bgVideo">
+      <source src="video_0bc7cb2b244c1518f989fbe071ac82b1_720_20250724021909.mp4" type="video/mp4" />
+    </video>
+
+    <div class="overlay"></div>
+    <div class="container">
+      <h1 class="display-4">Строим надёжное будущее</h1>
+      <p class="lead">Дома. Дороги. Инфраструктура.</p>
+      <a href="#services" class="btn btn-warning btn-lg">Наши услуги</a>
+    </div>
+  </header>
+
+  <!-- О компании -->
+  <section id="about" class="bg-light-gray">
+    <div class="container">
+      <h2 class="text-center mb-5">О нас</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>Компания "БетонПлюс" — ваш надёжный партнёр в сфере строительства. Более 18 лет мы создаём комфортные и долговечные здания, дороги и инженерные сети по всей России. Мы объединяем опыт, современные технологии и внимание к деталям.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="images.png" class="img-fluid rounded" alt="О нас">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="services">
+  <div class="container">
+    <h2 class="text-center mb-5">Наши услуги</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bg-white p-4 text-center rounded-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1275/1275479.png" class="feature-icon" alt="Строительство домов">
+          <h4>Строительство домов</h4>
+          <p>Кирпичные и монолитные дома под ключ с гарантией 5 лет.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white p-4 text-center rounded-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2942/2942551.png" class="feature-icon" alt="Ремонт и отделка">
+          <h4>Ремонт и отделка</h4>
+          <p>Капитальный и косметический ремонт любых помещений.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white p-4 text-center rounded-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png" class="feature-icon" alt="Проектирование">
+          <h4>Проектирование</h4>
+          <p>Полный цикл проектной документации с 3D-визуализацией.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Преимущества -->
+  <section id="advantages" class="bg-dark-blue">
+    <div class="container">
+      <h2 class="text-center mb-5">Наши преимущества</h2>
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="glass-card">
+            <h4>20+ лет опыта</h4>
+            <p>Наша команда реализовала более 120 проектов по всей стране.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="glass-card">
+            <h4>Современные технологии</h4>
+            <p>Применяем BIM-моделирование, дроны и инновационные материалы.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="glass-card">
+            <h4>Гарантия качества</h4>
+            <p>Все объекты проходят независимую экспертизу и сдаются точно в срок.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цифры -->
+  <section id="stats" class="bg-light-gray">
+    <div class="container">
+      <h2 class="text-center mb-5">Нам доверяют</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="counter" data-target="120">0</div>
+          <p>Завершённых проектов</p>
+        </div>
+        <div class="col-md-3">
+          <div class="counter" data-target="85">0</div>
+          <p>Довольных клиентов</p>
+        </div>
+        <div class="col-md-3">
+          <div class="counter" data-target="50">0</div>
+          <p>Сотрудников в штате</p>
+        </div>
+        <div class="col-md-3">
+          <div class="counter" data-target="18">0</div>
+          <p>Лет на рынке</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Контакты -->
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Связаться с нами</h2>
+    <p>
+      <a href="https://wa.me/79999999999" target="_blank" rel="noopener" class="mx-3 contact-icon" aria-label="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="40" />
+      </a>
+      <a href="https://t.me/company" target="_blank" rel="noopener" class="mx-3 contact-icon" aria-label="Telegram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="40" />
+      </a>
+      <a href="mailto:info@stroika.ru" class="mx-3 contact-icon" aria-label="Email">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="40" />
+      </a>
+      <a href="tel:+79999999999" class="mx-3 contact-icon" aria-label="Телефон">
+        <img src="https://cdn-icons-png.flaticon.com/512/9946/9946341.png" alt="Телефон" width="40" />
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+
+  .contact-icon {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  }
+  .contact-icon img {
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+  }
+  .contact-icon:hover img {
+    filter: none;
+    transform: scale(1.2);
+  }
+</style>
+
+
+  <!-- Подвал -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 БетонПлюс. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css"></script>
+  <script>
+    // Анимация счётчиков
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    };
+
+    let countersStarted = false;
+    window.addEventListener('scroll', () => {
+      const statsSection = document.getElementById('stats');
+      const sectionTop = statsSection.offsetTop;
+      if (!countersStarted && window.scrollY + window.innerHeight > sectionTop + 100) {
+        animateCounters();
+        countersStarted = true;
+      }
+    });
+  </script>
+</body>
+</html>
